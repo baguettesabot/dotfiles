@@ -1,0 +1,15 @@
+[global]
+follow=keyboard
+height=60
+width=220
+notification_limit=5
+origin=top-right
+transparency=30
+icon_corner_radius=1
+icon_corners=all
+gap_size=2
+force_xwayland=true
+corner_radius=3
+corners=all
+frame_width=1
+font="UbuntuMono Nerd Font Mono 9"
