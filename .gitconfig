@@ -11,3 +11,10 @@
 	helper = !/usr/bin/gh auth git-credential
 [includeIf "gitdir:~/repos/work"]
     path = .gitconfig.work
+[alias]
+	cfg = config
+	ct = commit -m
+	graph = log --all --graph
+	br = branch
+	st = status
+	ap = add -p
