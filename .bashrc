@@ -13,3 +13,4 @@ export EDITOR='nvim'
 export PATH=$PATH:$HOME/bin
 
 alias setup=". setupcode.sh"
+alias explore=". explore.sh"
