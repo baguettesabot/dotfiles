@@ -15,6 +15,7 @@ return {
   --file explorer
   {
     "nvim-tree/nvim-tree.lua",
+    lazy = true,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
       { "fe", "<cmd>NvimTreeFocus<CR>", noremap = true },
@@ -34,6 +35,7 @@ return {
   },
   {
     "antosha417/nvim-lsp-file-operations",
+    lazy = true,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-tree.lua",
@@ -46,6 +48,7 @@ return {
   --fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
+    lazy = true,
     dependencies = {
       "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons",
       "nvim-treesitter/nvim-treesitter",
@@ -92,6 +95,7 @@ return {
   --better syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = true,
     config = function()
       require "nvim-treesitter.install".prefer_git = true
       require "nvim-treesitter".setup()
@@ -122,6 +126,7 @@ return {
   --status line
   {
     "nvim-lualine/lualine.nvim",
+    lazy = true,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("lualine").setup {
@@ -175,6 +180,7 @@ return {
   --autocomplete
   {
     "hrsh7th/nvim-cmp",
+    lazy = true,
     event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
@@ -220,6 +226,7 @@ return {
   --lsp manager
   {
     "williamboman/mason.nvim",
+    lazy = true,
     dependencies = {
       "williamboman/mason-lspconfig.nvim"
     },
