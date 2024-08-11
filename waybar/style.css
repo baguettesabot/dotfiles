@@ -1,13 +1,14 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: UbuntuMono Nerd Font Mono;
-    font-size: 13px;
+    font-size: 12px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.25);
-    border-bottom: 1px solid rgba(100, 114, 125, 0.25);
+    background-color: transparent;
+    /*background-color: rgba(43, 48, 59, 0.25);
+    border-bottom: 1px solid rgba(100, 114, 125, 0.25);*/
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -55,10 +56,16 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 2px;
-    background-color: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+    /*padding-top: 0px;
+    padding-bottom: 0px;*/
+    /*padding: 0 2px;*/
+    /* background-color: transparent; */
+    background-color: rgba(43, 48, 59, 0.25);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 12px;
+    border-radius: 12px;
 }
 
 #workspaces button:hover {
@@ -121,21 +128,23 @@ button:hover {
 
 #clock {
     /*background-color: #64727D;*/
-    background: rgba(100, 114, 125, 0.5);
+    background: rgba(100, 114, 125, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #battery {
     /*background-color: #ffffff;*/
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #battery.charging, #battery.plugged {
     color: #000000;
     /*color: #ffffff;*/
     /*background-color: #26A65B;*/
-    background: rgba(38, 166, 91, 0.5);
+    background: rgba(38, 166, 91, 0.4);
 }
 
 @keyframes blink {
@@ -148,7 +157,7 @@ button:hover {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     /*background-color: #f53c3c;*/
-    background: rgba(245, 60, 60, 0.5);
+    background: rgba(245, 60, 60, 0.4);
     color: #000000;
     /*color: #ffffff;*/
     animation-name: blink;
@@ -183,14 +192,16 @@ label:focus {
 
 #cpu {
     /*background-color: #2ecc71;*/
-    background: rgba(46, 204, 113, 0.5);
+    background: rgba(46, 204, 113, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #memory {
     /*background-color: #9b59b6;*/
-    background: rgba(155, 89, 182, 0.5);
+    background: rgba(155, 89, 182, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #disk {
@@ -201,31 +212,34 @@ label:focus {
 
 #backlight {
     /*background-color: #90b1b1;*/
-    background: rgba(144, 177, 177, 0.5);
+    background: rgba(144, 177, 177, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #network {
     /*background-color: #2980b9;*/
-    background: rgba(41, 128, 185, 0.5);
+    background: rgba(41, 128, 185, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #network.disconnected {
     /*background-color: #f53c3c;*/
-    background: rgba(245, 60, 60, 0.5);
+    background: rgba(245, 60, 60, 0.4);
     color: #000000;
 }
 
 #pulseaudio {
     /*background-color: #f1c40f;*/
-    background: rgba(241, 196, 15, 0.5);
+    background: rgba(241, 196, 15, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #pulseaudio.muted {
     /*background-color: #90b1b1;*/
-    background: rgba(144, 177, 177, 0.5);
+    background: rgba(144, 177, 177, 0.4);
     color: #2a5c45;
 }
 
@@ -254,18 +268,20 @@ label:focus {
 
 #temperature {
     /*background-color: #f0932b;*/
-    background: rgba(240, 147, 43, 0.5);
+    background: rgba(240, 147, 43, 0.4);
     color: #000000;
+    border-radius: 12px;
 }
 
 #temperature.critical {
     /*background-color: #eb4d4b;*/
-    background: rgba(235, 77, 75, 0.5);
+    background: rgba(235, 77, 75, 0.4);
     color: #000000;
 }
 
 #tray {
     background-color: #2980b9;
+    border-radius: 12px;
 }
 
 #tray > .passive {
