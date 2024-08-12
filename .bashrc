@@ -11,7 +11,10 @@ PS1='[\u@\h \W]\$ '
 
 export EDITOR='nvim'
 export PATH=$PATH:$HOME/bin
+export GRIM_DEFAULT_DIR=$HOME/Pictures/screencapture/
 
 alias setup=". setupcode.sh"
 alias explore=". explore.sh"
 alias r=". ranger"
+
+fortune | cowsay -f stegosaurus
