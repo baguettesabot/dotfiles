@@ -66,6 +66,7 @@ button:hover {
     color: #ffffff;
     font-size: 12px;
     border-radius: 12px;
+    margin: 1px;
 }
 
 #workspaces button:hover {
