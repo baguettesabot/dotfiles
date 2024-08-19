@@ -11,6 +11,8 @@ return {
   },
   { "Mofiqul/vscode.nvim" },
   { "olimorris/onedarkpro.nvim" },
+  { "junegunn/seoul256.vim" },
+  { "ribru17/bamboo.nvim" },
 
   --file explorer
   {
