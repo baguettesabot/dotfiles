@@ -7,29 +7,29 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "network",
+        "pulseaudio",
+        "clock",
         "sway/mode",
         "sway/scratchpad",
         "custom/media"
     ],
     "modules-center": [
-        "sway/window"
+        "sway/window",
+        "hyprland/workspaces",
     ],
     "modules-right": [
         "mpd",
         // "idle_inhibitor",
-        "pulseaudio",
-        "network",
         "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        // "cpu",
+        // "memory",
+        // "temperature",
         "backlight",
         "keyboard-state",
         "sway/language",
         "battery",
         "battery#bat2",
-        "clock",
         "tray"
     ],
     // Modules configuration
