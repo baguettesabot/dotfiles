@@ -1,14 +1,10 @@
 #.config/ files
-dot_config_files=$(ls | grep -v "mklinks.sh")
+dot_config_files=$(ls dotconfig)
 echo "~/.config/" $dot_config_files
 
-#hidden files, excluding .gitconfig (do separately)
-hidden_files=$(ls -d .?* | grep -v ".git")
-echo "~/" $hidden_files
-
-#symlinking .gitconfig* files separately
-git_config_files=$(ls -d .?* | grep ".gitconfig")
-echo "~/ (.gitconfig*)" $git_config_files
+#$HOME/ files
+home_files=$(\ls home -A)
+echo "~/" $home_files
 
 symlink_challenge=""
 read -p "symlink all? yes, no: " symlink_challenge
@@ -20,8 +16,7 @@ elif [[ $symlink_challenge == "no" ]]; then
   echo "choose files to symlink (separate with space):"
   
   read -p "~/.config/ : " dot_config_files
-  read -p "~/ : " hidden_files
-  read -p "~/ (.gitconfig*) : " git_config_files
+  read -p "~/ : " home_files
 
   selective_symlink_challenge=""
   read -p "confirm selective symlink? (yes, no) " selective_symlink_challenge
@@ -34,20 +29,13 @@ fi
 echo "~/.config/"
 #.config/ files
 for i in $dot_config_files; do
-  #ln -s $HOME/dotfiles/$i $HOME/.config/$i
+  ln -s $HOME/dotfiles/dotconfig/$i $HOME/.config/$i
   echo OK $i
 done
 
 echo "~/"
-#hidden files, excluding .gitconfig (do separately)
-for i in $hidden_files; do
-  #ln -s $HOME/dotfiles/$i $HOME/$i
-  echo OK $i
-done
-
-echo "~/ (.gitconfig*)"
-#symlinking .gitconfig* files separately
-for i in $git_config_files; do
-  #ln -s $HOME/dotfiles/$i $HOME/$i
+#$HOME/ files
+for i in $home_files; do
+  ln -s $HOME/dotfiles/home/$i $HOME/$i
   echo OK $i
 done
