@@ -241,7 +241,8 @@ label:focus {
 #pulseaudio.muted {
     /*background-color: #90b1b1;*/
     background: rgba(144, 177, 177, 0.4);
-    color: #2a5c45;
+    color: #000000;
+    /*color: #2a5c45;*/
 }
 
 #wireplumber {

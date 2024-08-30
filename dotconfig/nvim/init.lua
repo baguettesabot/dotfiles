@@ -15,6 +15,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require "config"
+require("config")
 
---require("plugin_loader").load()
+require("lazy").setup({
+  spec = {
+    { import = "plugins" },
+  },
+  checker = { enabled = true },
+})

@@ -25,7 +25,7 @@
         "power-profiles-daemon",
         // "cpu",
         // "memory",
-        // "temperature",
+        "temperature",
         "backlight",
         "pulseaudio",
         "keyboard-state",
