@@ -9,7 +9,7 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-[includeIf "gitdir:~/repos/work"]
+[includeIf "gitdir:~/work/"]
     path = .gitconfig.work
 [alias]
 	cfg = config
@@ -18,3 +18,5 @@
 	br = branch
 	st = status
 	ap = add -p
+[push]
+	autoSetupRemote = true

@@ -12,13 +12,26 @@ return {
 		},
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
-			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
+			{ "fb", "<cmd>Telescope buffers<cr>" },
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
-			{ "fb", "<cmd>Telescope file_browser<cr>" }
+			{ "<leader>fb", "<cmd>Telescope file_browser<cr>" },
 		},
 		config = function()
+			actions = require("telescope.actions")
+
 			require("telescope").load_extension("fzf")
 			require("telescope").load_extension("file_browser")
+			require("telescope").setup({
+				defaults = {
+					mappings = {
+						i = {
+							["<C-k>"] = actions.move_selection_previous,
+							["<C-j>"] = actions.move_selection_next,
+							["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist
+						}
+					},
+				}
+			})
 		end
 	}
 }
