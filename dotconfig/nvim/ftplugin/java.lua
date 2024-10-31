@@ -1,5 +1,5 @@
 local project_name = vim.fn.fnamemodify(require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}), ':p:h:t')
-local workspace_dir = "/home/jay/jdtls-data/" .. project_name
+local workspace_dir = "/home/baguette/jdtls-data/" .. project_name
 
 local config = {
 	cmd = {

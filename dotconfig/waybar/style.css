@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: UbuntuMono Nerd Font Mono;
-    font-size: 12px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -129,7 +129,7 @@ button:hover {
 
 #clock {
     /*background-color: #64727D;*/
-    background: rgba(100, 114, 125, 0.4);
+    background: rgba(100, 114, 125, 0.6);
     color: #000000;
     border-radius: 12px;
 }
@@ -220,14 +220,14 @@ label:focus {
 
 #network {
     /*background-color: #2980b9;*/
-    background: rgba(41, 128, 185, 0.4);
+    background: rgba(41, 128, 185, 0.6);
     color: #000000;
     border-radius: 12px;
 }
 
 #network.disconnected {
     /*background-color: #f53c3c;*/
-    background: rgba(245, 60, 60, 0.4);
+    background: rgba(245, 60, 60, 0.6);
     color: #000000;
 }
 
@@ -246,12 +246,14 @@ label:focus {
 }
 
 #wireplumber {
-    background-color: #fff0f5;
+    background: rgba(241, 196, 15, 0.6);
     color: #000000;
+    border-radius: 12px;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background: rgba(144, 177, 177, 0.6);
+    color: #000000;
 }
 
 #custom-media {
@@ -270,14 +272,14 @@ label:focus {
 
 #temperature {
     /*background-color: #f0932b;*/
-    background: rgba(240, 147, 43, 0.4);
+    background: rgba(240, 147, 43, 0.6);
     color: #000000;
     border-radius: 12px;
 }
 
 #temperature.critical {
     /*background-color: #eb4d4b;*/
-    background: rgba(235, 77, 75, 0.4);
+    background: rgba(235, 77, 75, 0.6);
     color: #000000;
 }
 

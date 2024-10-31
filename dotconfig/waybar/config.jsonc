@@ -23,11 +23,12 @@
         "mpd",
         // "idle_inhibitor",
         "power-profiles-daemon",
+        "wireplumber",
         // "cpu",
         // "memory",
         "temperature",
         "backlight",
-        "pulseaudio",
+        // "pulseaudio",
         "keyboard-state",
         "sway/language",
         "tray"
@@ -176,6 +177,12 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "on-click": "helvum",
+        "format-icons": ["", "", ""]
     },
     "custom/media": {
         "format": "{icon} {}",
