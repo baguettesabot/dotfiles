@@ -18,4 +18,6 @@ alias setup=". setupcode.sh"
 alias explore=". explore.sh"
 alias r=". ranger"
 
+source /usr/share/bash-completion/completions/git
+
 fortune | cowsay -f stegosaurus
