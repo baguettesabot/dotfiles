@@ -15,3 +15,7 @@ export GRIM_DEFAULT_DIR=$HOME/Pictures/screencapture/
 export HISTFILESIZE="sabot"
 
 alias r=". ranger"
+
+source /usr/share/bash-completion/completions/git
+
+fortune | cowsay -f stegosaurus
