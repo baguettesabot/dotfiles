@@ -20,4 +20,4 @@ alias r=". ranger"
 
 source /usr/share/bash-completion/completions/git
 
-fortune | cowsay -f stegosaurus
+cat ~/dotfiles/churchill | cowsay -f stegosaurus
