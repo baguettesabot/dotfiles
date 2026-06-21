@@ -9,5 +9,5 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec Hyprland
+  exec start-hyprland
 fi
