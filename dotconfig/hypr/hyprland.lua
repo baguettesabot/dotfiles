@@ -7,7 +7,7 @@ local host = handle:read()
 
 local local_monitor = require(host .. '/monitor')
 local local_input = require(host .. '/input')
--- local local_device = require(host .. '/device')
+local local_device = require(host .. '/device')
 
 -- env vars
 
@@ -41,7 +41,9 @@ end
 -- input
 
 hl.config({ input = local_input })
--- hl.device(local_device)
+for k,v in ipairs(local_device) do
+	hl.device(v)
+end
 
 -- window & config
 
@@ -112,8 +114,8 @@ hl.bind('code:107', hl.dsp.exec_cmd('grim -g "$(slurp -d)"'))
 
 -- media
 
-hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+', { repeating = true }))
-hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-', { repeating = true }))
+hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+'), { repeating = true })
+hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-'), { repeating = true })
 hl.bind('XF86AudioMute', hl.dsp.exec_cmd('wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'))
 hl.bind('XF86AudioNext', hl.dsp.exec_cmd('playerctl next'))
 hl.bind('XF86AudioPrev', hl.dsp.exec_cmd('playerctl previous'))
@@ -121,8 +123,8 @@ hl.bind('XF86AudioPlay', hl.dsp.exec_cmd('playerctl play-pause'))
 
 -- screen brightness
 
-hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('brightnessctl set 5%+', { repeating = true }))
-hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('brightnessctl set 5%-', { repeating = true }))
+hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('brightnessctl set 5%+'), { repeating = true })
+hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('brightnessctl set 5%-'), { repeating = true })
 
 -- Move focus with SUPER + vim movement keys
 
