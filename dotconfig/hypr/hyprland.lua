@@ -1,9 +1,20 @@
 -- host machine detection, as required
 
+local valid_hosts = { 'splash', 'lizarddoggo' }
+
 local handle = io.popen('hostnamectl hostname')
 local host = handle:read()
 
--- todo: check if valid host, optional
+local valid_host = 0
+for k,v in ipairs(valid_hosts) do
+	if v == host then
+		valid_host = 1
+	end
+end
+if valid_host == 0 then
+	-- figure out safe fallback later?
+	host = 'default_fallback'
+end
 
 local local_monitor = require(host .. '/monitor')
 local local_input = require(host .. '/input')
@@ -27,6 +38,10 @@ hl.env('HYPRCURSOR_SIZE', 8)
 -- programs + autostart
 
 local terminal = 'foot'
+
+-- load machine-specific hyprpaper conf
+
+
 
 hl.on('hyprland.start', function ()
 	hl.exec_cmd('waybar & hyprpaper')
