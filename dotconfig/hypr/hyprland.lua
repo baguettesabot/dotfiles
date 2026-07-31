@@ -41,7 +41,8 @@ local terminal = 'foot'
 
 -- load machine-specific hyprpaper conf
 
-
+os.execute('rm ~/.config/hypr/hyprpaper.conf')
+os.execute('cp ~/.config/hypr/' .. host .. '/hyprpaper.conf ~/.config/hypr/')
 
 hl.on('hyprland.start', function ()
 	hl.exec_cmd('waybar & hyprpaper')
