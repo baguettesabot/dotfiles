@@ -15,5 +15,15 @@ if [ $is_host_valid -eq 0 ]; then
 	current_host="default_fallback"
 fi
 
-rm ~/.config/foot/foot.ini
-cp ~/.config/foot/$current_host/foot.ini ~/.config/foot/
+declare -A configs
+configs["foot"]="foot.ini"
+
+for i in "${!configs[@]}"
+do
+	conf_files=(${configs[$i]}) 
+	for j in "${conf_files[@]}"
+	do
+		rm ~/.config/$i/$j
+		cp ~/.config/$i/$current_host/$j ~/.config/$i/
+	done
+done
