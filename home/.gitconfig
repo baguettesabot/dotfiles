@@ -11,6 +11,8 @@
 	helper = !/usr/bin/gh auth git-credential
 [includeIf "gitdir:~/work/"]
     path = .gitconfig.work
+[includeIf "gitdir:~/repos/cs61b/"]
+    path = .gitconfig.cs61b
 [alias]
 	cfg = config
 	ct = commit -m

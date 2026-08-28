@@ -1,0 +1,7 @@
+[user]
+  name = jayhkang
+  email = jayhkang@berkeley.edu
+[init]
+  defaultBranch = main
+[pull]
+  rebase = false

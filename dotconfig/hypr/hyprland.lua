@@ -158,10 +158,10 @@ hl.bind(modKey .. ' + SHIFT + J', hl.dsp.window.move({ direction = 'down' }))
 
 -- Resize window with SUPER + ALT + vim movement keys
 
-hl.bind(modKey .. ' + ALT + H', hl.dsp.window.resize({ x = -25, y = 0 }))
-hl.bind(modKey .. ' + ALT + L', hl.dsp.window.resize({ x = 25, y = 0 }))
-hl.bind(modKey .. ' + ALT + K', hl.dsp.window.resize({ x = 0, y = -25 }))
-hl.bind(modKey .. ' + ALT + J', hl.dsp.window.resize({ x = 0, y = 25 }))
+hl.bind(modKey .. ' + ALT + H', hl.dsp.window.resize({ x = -25, y = 0, relative = true }))
+hl.bind(modKey .. ' + ALT + L', hl.dsp.window.resize({ x = 25, y = 0, relative = true }))
+hl.bind(modKey .. ' + ALT + K', hl.dsp.window.resize({ x = 0, y = -25, relative = true }))
+hl.bind(modKey .. ' + ALT + J', hl.dsp.window.resize({ x = 0, y = 25, relative = true }))
 
 -- Move active window to a workspace with SUPER + SHIFT + [0-9]
 
