@@ -18,6 +18,7 @@ fi
 declare -A configs
 configs["foot"]="foot.ini"
 configs["tofi"]="config"
+configs["waybar"]="config.jsonc style.css"
 
 for i in "${!configs[@]}"
 do
