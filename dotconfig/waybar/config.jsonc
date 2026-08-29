@@ -23,12 +23,12 @@
         "mpd",
         // "idle_inhibitor",
         "power-profiles-daemon",
-        "wireplumber",
         // "cpu",
         // "memory",
         "temperature",
         "backlight",
         // "pulseaudio",
+        "wireplumber",
         "keyboard-state",
         "sway/language",
         "tray"
