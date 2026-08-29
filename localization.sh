@@ -17,6 +17,7 @@ fi
 
 declare -A configs
 configs["foot"]="foot.ini"
+configs["tofi"]="config"
 
 for i in "${!configs[@]}"
 do
