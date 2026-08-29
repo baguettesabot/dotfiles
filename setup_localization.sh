@@ -31,5 +31,5 @@ if [ "$confirm_setup" = "y" ]; then
 	done
 
 	echo "localization setup complete"
-	echo "REMINDER: ADD LOCALIZATION TARGET TO localization.sh"
+	echo "REMINDER: ADD LOCALIZATION TARGET TO localization.sh, GIT RM --CACHED"
 fi
