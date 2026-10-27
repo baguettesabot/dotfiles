@@ -6,7 +6,7 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		local lspconfig = require "lspconfig"
+		-- local lspconfig = require "lspconfig"
 		local cmp_nvim_lsp = require "cmp_nvim_lsp"
 
 		local on_attach = require("config.on-attach")
@@ -19,5 +19,12 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+
+		local clangd_opts = {}
+		if not vim.lsp.is_enabled('clangd') then
+			vim.lsp.enable('clangd', clangd_opts)
+		end
+
+
 	end
 }

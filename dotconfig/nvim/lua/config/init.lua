@@ -4,9 +4,9 @@ local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true
+-- opt.tabstop = 2
+-- opt.shiftwidth = 2
+-- opt.expandtab = true
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
