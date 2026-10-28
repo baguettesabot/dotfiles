@@ -22,3 +22,5 @@
 	ap = add -p
 [push]
 	autoSetupRemote = true
+[core]
+	excludesFiles = ~/.gitignore
