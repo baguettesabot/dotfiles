@@ -9,8 +9,6 @@ return {
 		-- local lspconfig = require "lspconfig"
 		local cmp_nvim_lsp = require "cmp_nvim_lsp"
 
-		local on_attach = require("config.on-attach")
-
 		--enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
